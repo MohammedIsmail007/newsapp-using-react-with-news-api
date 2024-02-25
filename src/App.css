@@ -4,8 +4,10 @@
   box-shadow: inset;
 }
 .card img {
-  width: 18rem;
+  width: 280px;
   height: 200px;
+  margin: 6px;
+  padding: 6px;
 }
 .newscard {
   justify-content: center;

@@ -8,7 +8,7 @@ function Card(props) {
         {props.news.urlToImage != null ? (
           <img
             src={props.news.urlToImage}
-            className="card-img-top "
+            className="img-thumbnail p-1  "
             alt="image not available"
           />
         ) : (

@@ -3,11 +3,13 @@ import Card from "./Card";
 import "./App.css";
 import { useState, useEffect } from "react";
 function News() {
+  let date = new Date();
   let [articles, setArticles] = useState([]);
   let [category, setCategory] = useState("Apple");
+  let [fromDate, setFromDate] = useState(date.getDate());
   useEffect(() => {
     fetch(
-      `https://newsapi.org/v2/everything?q=${category}&from=2024-02-23&apiKey=1ef89c563c36445397705dd35c5676ea`
+      `https://newsapi.org/v2/everything?q=${category}&from=${fromDate}&apiKey=2e38381707c4414483efdf553c13bf25`
     )
       .then((response) => response.json())
       .then((news) => {
@@ -32,6 +34,7 @@ function News() {
           }
         }}
       ></input>
+
       <div className="newscard">
         {articles.length != 0 ? (
           articles.map((news) => {
