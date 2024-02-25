@@ -5,17 +5,17 @@ import { useState, useEffect } from "react";
 function News() {
   let [articles, setArticles] = useState([]);
   let [category, setCategory] = useState("Apple");
-  // useEffect(() => {
-  //   fetch(
-  //     `https://newsapi.org/v2/everything?q=${category}&from=2024-02-23&apiKey=1ef89c563c36445397705dd35c5676ea`
-  //   )
-  //     .then((response) => response.json())
-  //     .then((news) => {
-  //       setArticles(news.articles);
-  //       console.log(news.articles);
-  //     })
-  //     .catch((err) => console.log(err));
-  // }, [category]);
+  useEffect(() => {
+    fetch(
+      `https://newsapi.org/v2/everything?q=${category}&from=2024-02-23&apiKey=1ef89c563c36445397705dd35c5676ea`
+    )
+      .then((response) => response.json())
+      .then((news) => {
+        setArticles(news.articles);
+        console.log(news.articles);
+      })
+      .catch((err) => console.log(err));
+  }, [category]);
 
   return (
     <div>

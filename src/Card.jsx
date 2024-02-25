@@ -1,15 +1,20 @@
 import React from "react";
 
 function Card(props) {
-  //   console.log(props);
+  //console.log(props);
   return (
     <div>
       <div className="card" style={{ width: 18 + "rem" }}>
-        <img
-          src={props.news.urlToImage}
-          className="card-img-top "
-          alt="image not available"
-        />
+        {props.news.urlToImage != null ? (
+          <img
+            src={props.news.urlToImage}
+            className="card-img-top "
+            alt="image not available"
+          />
+        ) : (
+          <img src="https://cdn.iconscout.com/icon/free/png-256/free-no-image-1771002-1505134.png" />
+        )}
+
         <div className="card-title m-3  fw-bold ">
           {props.news.title?.substring(0, 50)}...
         </div>
