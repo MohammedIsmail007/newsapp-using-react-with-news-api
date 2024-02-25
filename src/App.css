@@ -1,0 +1,27 @@
+.card {
+  margin: 5px;
+  flex-wrap: wrap;
+  box-shadow: inset;
+}
+.card img {
+  width: 18rem;
+  height: 200px;
+}
+.newscard {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px;
+}
+.authorReadmore {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 800;
+  flex-wrap: wrap;
+  padding: 2px;
+}
+a {
+  text-decoration: none;
+  color: white;
+  flex-wrap: wrap;
+}
